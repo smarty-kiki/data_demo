@@ -5,7 +5,7 @@ ROOT_DIR="$(cd "$(dirname $0)" && pwd)"/../../..
 ln -fs $ROOT_DIR/project/config/production/nginx/data_demo.conf /etc/nginx/sites-enabled/data_demo
 /usr/sbin/service nginx reload
 
-/bin/bash $ROOT_DIR/project/tool/dep_build.sh link
+/bin/bash $ROOT_DIR/project/tool/dep_build.sh file
 /usr/bin/php $ROOT_DIR/public/cli.php migrate:install
 /usr/bin/php $ROOT_DIR/public/cli.php migrate
 
